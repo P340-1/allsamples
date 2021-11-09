@@ -1,10 +1,17 @@
 <?php
 spl_autoload_register();
+error_reporting(E_ALL);
 
-//use MVC\Controllers\Controller;
-
-$obj = new Sample();
+$obj = new classSampleOne();
 echo $obj->msg();
+echo('<br>');
 
-$obj = new SampleTwo();
+echo( ($obj->$val_0).'<br>');
+
+$obj = new classSampleTwo();
+$obj->$newVal = 'newVal';
 echo $obj->msg();
+echo('<br>');
+echo($obj->$newVal);
+
+
