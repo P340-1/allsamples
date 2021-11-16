@@ -41,3 +41,4 @@ $obj->fnoabs();
 $obj->traitPrintVal();
 
 // Создать анонимный класс
+
