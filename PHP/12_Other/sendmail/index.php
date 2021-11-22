@@ -1,4 +1,6 @@
 <?php
+// 1. В командной строке выполнить composer install
+// 2. Для yandex в настройках почты включить IMAP => портальный пароль!
 
 require "vendor/autoload.php";
 
@@ -7,8 +9,8 @@ echo('Ready...');
 $message = new Swift_Message();
 echo('OK...');
 
-$message->setFrom('liangabarsky@yandex.ru');
-$message->setTo(array('p-grn@yandex.ru' => 'Джемс'));
+$message->setFrom('MyLogin@yandex.ru');
+$message->setTo(array('ToLogin@yandex.ru' => 'Джемс'));
 $message->setSubject('Delicious New Recipe');
 
 $message->setBody (<<<_TEXT_
@@ -19,7 +21,7 @@ _TEXT_
 var_dump($message);
 
 $transport = (new Swift_SmtpTransport('smtp.yandex.ru', 465, 'ssl'))
-->setUsername('LianGabarsky@yandex.ru') // для yandex в настройках почты включить портальный пароль!
+->setUsername('MyLogin@yandex.ru') 
 ->setPassword('');
 
 
