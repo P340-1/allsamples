@@ -12,8 +12,8 @@
 
     public function __construct()
     {
-        $this->$val_0 = 'val_0';
-        echo('construct '.$this->$val_0.'<br>');
+        $this->val_0 = 'val_0';
+        echo('construct '.$this->val_0.'<br>');
     }
 
     public function msg()
@@ -88,3 +88,4 @@
  }
 
 
+echo classSampleOne:: val_const;
