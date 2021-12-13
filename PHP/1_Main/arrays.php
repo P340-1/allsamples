@@ -50,3 +50,12 @@ echo '</pre>';
 // array_key_exists()
 // array_search() - найти ключ по значению
 
+$array = [1.4,7,8,12,-5];
+//print_r ($array );
+//sort ($array) ;
+//print_r ($array );
+
+//echo "\n".max($array);
+//echo "\n".min($array);
+
+print_r (array_reverse ( $array));
