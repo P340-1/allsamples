@@ -16,7 +16,7 @@ sort($my_array);
 var_dump($my_array);
 
 
-$my_array1 = [];
+$my_array1  = [];
 $my_array1[] = 'new_value';
 
 echo('<br>');

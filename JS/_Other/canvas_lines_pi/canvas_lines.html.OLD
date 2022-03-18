@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+html, body {
+    background-color: #222222;
+    display: flex;    
+    flex-direction: column;
+    height: 100%;
+}
+
+.cbox {
+    max-width: 800.5px;
+    height: 500.5px;
+    background-color: #CCCCCC;
+    border: none;
+    border-radius: 15px;
+    margin: auto;
+}
+</style>
+
+<script>
+
+    function drawLine() {
+        let example1 = "0000111122223333";
+        let freqs = new Array();
+
+        for (i=0; i<99; i++) {
+            freqs[i] = 0;
+        }
+
+        for (i=0; i<example1.length; i+=2) {
+            freqs[ Number.parseInt(0+(example1[i]+example1[i+1])) ]++;
+        }
+
+        let canvas = document.getElementById('cbox');
+        let ctx = canvas.getContext('2d'); 
+
+        canvas.width  = canvas.offsetWidth;
+        canvas.height = canvas.offsetHeight;
+
+
+ctx.strokeStyle = "blue"; 
+ctx.lineWidth = "3"; 
+
+for (i=0; i<99; i++) {
+    ctx.moveTo(i*6, canvas.height);
+    currentY = freqs[i]/example1.length/2*100*3*300;
+    ctx.lineTo(i*6, canvas.height- currentY );
+    ctx.stroke();         
+    }
+}
+
+</script>
+
+</head>
+
+<body>   
+    <canvas class = "cbox" id = "cbox" ></canvas>
+</body>
+
+<script>
+    drawLine();
+</script>
+
+</html>
