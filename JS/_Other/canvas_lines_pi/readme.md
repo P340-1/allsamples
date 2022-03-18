@@ -1,10 +1,8 @@
 
-График частоты встречаемости двузначных чисел в числе Pi
-Знаки числа: https://sanstv.ru/pi?ysclid=l0vndg92oo
+Р“СЂР°С„РёРє С‡Р°СЃС‚РѕС‚С‹ РІСЃС‚СЂРµС‡Р°РµРјРѕСЃС‚Рё РґРІСѓР·РЅР°С‡РЅС‹С… С‡РёСЃРµР» РІ С‡РёСЃР»Рµ Pi
+Р—РЅР°РєРё С‡РёСЃР»Р°: https://sanstv.ru/pi?ysclid=l0vndg92oo
 
 
 	canvas
-
 	lines	
-
 	document.addEventListener("DOMContentLoaded", function() {
